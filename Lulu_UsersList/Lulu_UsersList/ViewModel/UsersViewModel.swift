@@ -38,7 +38,15 @@ extension UsersViewModel:UITableViewDelegate,UITableViewDataSource {
         return users?.data.count ?? 0
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let vc  = self.controller.storyboard?.instantiateViewController(withIdentifier: "UserDetailsViewController") as? UserDetailsViewController, let user = users?.data[indexPath.row] {
+            vc.user = user
+            vc.indexPath = indexPath
+            vc.didSelectSave = { [weak self] () -> Void in
+                self?.reloadTable()
+
+            }
+            controller.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.identifier) as? UserTableViewCell {
@@ -48,6 +56,15 @@ extension UsersViewModel:UITableViewDelegate,UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.users?.data.remove(at: indexPath.row)
+            self.reloadTable()
+        }
     }
     
     

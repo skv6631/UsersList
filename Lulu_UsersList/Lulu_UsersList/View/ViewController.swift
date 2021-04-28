@@ -22,6 +22,10 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationItem.title = "Users List"
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationItem.title = nil
+    }
 
 
 }

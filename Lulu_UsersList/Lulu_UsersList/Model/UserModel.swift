@@ -10,15 +10,15 @@ import Foundation
 //   let users = try? newJSONDecoder().decode(Users.self, from: jsonData)
 
 // MARK: - Users
-struct Users: Codable {
-    let data: [User]
+class Users: Codable {
+    var data: [User]
 }
 
 // MARK: - Datum
-struct User: Codable {
-    let id: Int
-    let email, firstName, lastName: String
-    let avatar: String
+class User: Codable {
+    var id: Int
+    var email, firstName, lastName: String
+    var avatar: String
 
     enum CodingKeys: String, CodingKey {
         case id, email
