@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		40FFEFC8CCD24514B411DF07 /* Pods_Lulu_UsersListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C462536E80F13C58EA3282 /* Pods_Lulu_UsersListTests.framework */; };
 		A158063F26394CEF0009BE10 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A158063E26394CEF0009BE10 /* UserDetailsViewController.swift */; };
+		A165855826396B8500C861AE /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A165855726396B8500C861AE /* UserDetailsViewModel.swift */; };
 		A1BE99D7263925440009DD56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE99D6263925440009DD56 /* AppDelegate.swift */; };
 		A1BE99D9263925440009DD56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE99D8263925440009DD56 /* SceneDelegate.swift */; };
 		A1BE99DB263925440009DD56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE99DA263925440009DD56 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		62C0FD50B83FE44B5DAEC553 /* Pods-Lulu_UsersList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lulu_UsersList.debug.xcconfig"; path = "Target Support Files/Pods-Lulu_UsersList/Pods-Lulu_UsersList.debug.xcconfig"; sourceTree = "<group>"; };
 		92B78BEBCEFA485B3BBDEB90 /* Pods-Lulu_UsersList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lulu_UsersList.release.xcconfig"; path = "Target Support Files/Pods-Lulu_UsersList/Pods-Lulu_UsersList.release.xcconfig"; sourceTree = "<group>"; };
 		A158063E26394CEF0009BE10 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		A165855726396B8500C861AE /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
 		A1BE99D3263925440009DD56 /* Lulu_UsersList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lulu_UsersList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BE99D6263925440009DD56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1BE99D8263925440009DD56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				A1BE9A0D263927790009DD56 /* UsersViewModel.swift */,
+				A165855726396B8500C861AE /* UserDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				A1BE9A5D263933140009DD56 /* StringExtension.swift in Sources */,
 				A1BE9A56263932170009DD56 /* UserTableViewCell.swift in Sources */,
 				A1BE9A62263933280009DD56 /* UIViewExtension.swift in Sources */,
+				A165855826396B8500C861AE /* UserDetailsViewModel.swift in Sources */,
 				A1BE9A17263929B70009DD56 /* UserModel.swift in Sources */,
 				A1BE99D9263925440009DD56 /* SceneDelegate.swift in Sources */,
 			);
