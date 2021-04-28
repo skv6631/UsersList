@@ -43,7 +43,7 @@ extension UsersViewModel:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.identifier) as? UserTableViewCell {
             if let user = users?.data[indexPath.row]{
-                cell.setupCell(user: user)
+                cell.setupCell(user: user, indexPath)
             }
             return cell
         }

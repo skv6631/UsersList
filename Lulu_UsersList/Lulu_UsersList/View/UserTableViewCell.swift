@@ -23,18 +23,29 @@ class UserTableViewCell: UITableViewCell {
     }
     /// Prepares the cell for the provided model object 
     /// - Parameter contact: object of Contact class
-    func setupCell(user:User){
+    func setupCell(user:User, _ indexPath:IndexPath){
         setupUI()
-        if let url = URL(string:user.avatar) {
-            NetworkManager.sharedInstance.downloadImage(from: url) { [weak self] (image) in
-                DispatchQueue.main.async {
-                    if let _img = image {
-                        self?.avatar.setImage(_img, for: .normal)
-                        self?.avatar.setTitle(nil, for: UIControl.State.normal)
+        if indexPath.row % 2 == 1 {
+        //odd row
+            if let url = URL(string:user.avatar) {
+                NetworkManager.sharedInstance.downloadImage(from: url) { [weak self] (image) in
+                    DispatchQueue.main.async {
+                        if let _img = image {
+                            self?.avatar.setImage(_img, for: .normal)
+                            self?.avatar.setTitle(nil, for: UIControl.State.normal)
+                        }
                     }
-                }
 
+                }
             }
+
+        } else {
+            //even row
+            let initials = String(user.firstName.prefix(1)  + user.lastName.prefix(1))
+            self.avatar.setTitle(initials, for: UIControl.State.normal)
+            self.avatar.setImage(nil, for: .normal)
+
+
         }
         self.emailLabel.text = user.email
         self.nameLabel.text = user.firstName + " " + user.lastName
