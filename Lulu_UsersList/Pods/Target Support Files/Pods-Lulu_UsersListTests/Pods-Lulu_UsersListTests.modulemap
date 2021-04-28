@@ -1,0 +1,6 @@
+framework module Pods_Lulu_UsersListTests {
+  umbrella header "Pods-Lulu_UsersListTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
