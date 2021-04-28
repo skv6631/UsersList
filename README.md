@@ -11,3 +11,6 @@ from steps 2 and 3 in the center of the screen. Allow to edit first name and
 last name in the detail screen.
 6. Add a save button at the bottom of the detail screen. On clicking the save
 button, pop back to the 1st screen and reload the tableview with edited details using closure.
+
+
+![Simulator Screen Shot - iPhone 11 Pro - 2021-04-28 at 15 44 14](https://user-images.githubusercontent.com/81684906/116389332-7043e780-a83a-11eb-9d99-48f10160c998.png) ![Simulator Screen Shot - iPhone 11 Pro - 2021-04-28 at 15 44 20](https://user-images.githubusercontent.com/81684906/116389355-76d25f00-a83a-11eb-8684-042c578c51b3.png)
