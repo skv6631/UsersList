@@ -30,6 +30,7 @@ class UserTableViewCell: UITableViewCell {
                 DispatchQueue.main.async {
                     if let _img = image {
                         self?.avatar.setImage(_img, for: .normal)
+                        self?.avatar.setTitle(nil, for: UIControl.State.normal)
                     }
                 }
 
@@ -40,11 +41,13 @@ class UserTableViewCell: UITableViewCell {
     }
     /// Uses for applying UI properties like color, font, etc..
     fileprivate func setupUI() {
-        avatar.contentMode = .scaleAspectFill
+        self.emailLabel.textColor = .gray
+        self.emailLabel.font = UIFont.systemFont(ofSize: 14)
+        avatar.imageView?.contentMode = .scaleAspectFill
     }
     override func layoutSubviews() {
         super.layoutSubviews()
-//        contactImageView.makeCircle()
+        avatar.makeCircle()
     }
   
     

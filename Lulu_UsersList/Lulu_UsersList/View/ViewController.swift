@@ -18,6 +18,10 @@ class ViewController: UIViewController {
         viewModel.tableView = self.tableView
         viewModel.setupViews()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = "Users List"
+    }
 
 
 }

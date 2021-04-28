@@ -30,14 +30,16 @@ class UsersViewModel:NSObject {
 //MARK:- Tableveiw Delegatets
 extension UsersViewModel:UITableViewDelegate,UITableViewDataSource {
     private func reloadTable(){
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
+        DispatchQueue.main.async{
             self.tableView.reloadData()
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users?.data.count ?? 0
     }
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.identifier) as? UserTableViewCell {
             if let user = users?.data[indexPath.row]{
